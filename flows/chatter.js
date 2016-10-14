@@ -110,6 +110,6 @@ module.exports = (slapp) => {
 
   slapp.action('submit_order_callback', 'submit', (msg, value) => {
     msg.say("Done and done")
-  }
+  })
 
 }
