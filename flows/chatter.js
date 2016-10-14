@@ -53,14 +53,13 @@ module.exports = (slapp) => {
       text: "Vivalto Lungo is a balanced coffee made from a complex blend of separately roasted South American and East African Arabicas, combining roasted and subtle floral notes.",
       thumb_url: "https://www.nespresso.com/ecom/medias/sys_master/public/9375747997726/C-0038-icon-42x42.png",
       footer: "2 pods in stock",
-      actions: bottomActions(2);
+      actions: bottomActions(2)
     })
 
     attachments.push({
       text: 'Something',
       fallback: 'move to the bottom',
       callback_id: 'in_or_out_callback',
-      actions: bottomActions
     })
 
     msg.say({
