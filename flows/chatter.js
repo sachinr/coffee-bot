@@ -16,6 +16,8 @@ module.exports = (slapp) => {
       actions: bottomActions
     })
 
+    text = "starting demo"
+
     msg.say({
       text: text,
       attachments: attachments
