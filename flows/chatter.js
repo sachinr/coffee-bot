@@ -149,6 +149,7 @@ module.exports = (slapp) => {
     let attachments = [{
             color: "#fff",
             fallback: "image",
+            image_url: "https://251d2191a60056d6ba74-1671eccf3a0275494885881efb0852a4.ssl.cf1.rackcdn.com/10302882_enliven-your-mornings--nespresso_tdb12a552.gif",
             pretext: "Your order for 8 cups of Nepresso has been submitted. Your coffee is now brewing and will be delivered to shortly."
         }, {
             color: "#fff",
