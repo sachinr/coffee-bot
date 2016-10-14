@@ -114,13 +114,12 @@ module.exports = (slapp) => {
 
 
   slapp.action('ristretto_callback', (msg, value) => {
-    console.log(msg, value)
     let original = msg.body.original_message;
-    let selected = original.actions[0].value;
+    let selected = value;
 
     original.attachments.forEach(attachment => {
       // nothing to do
-        if (original.callback_id !== message.callback_id) return;
+        //if (original.callback_id !== message.callback_id) return;
 
       // update selection to green
       attachment.actions.forEach(action => {
