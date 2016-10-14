@@ -20,8 +20,8 @@ module.exports = (slapp) => {
         footer: "Main Conference Room",
         callback_id: 'start_order_callback',
         actions: [
-          { "name": "yes", "value": "yes", "text": "yes", "type": "button"},
-          { "name": "no", "value": "no", "text": "no", "type": "button"}
+          { "name": "yes", "value": "yes", "text": "Yes", "type": "button"},
+          { "name": "no", "value": "no", "text": "No", "type": "button"}
         ]
       }
     ]
