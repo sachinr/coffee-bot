@@ -9,9 +9,7 @@ module.exports = (slapp) => {
   })
 
   slapp.command('/start-demo', /.*/, (msg, text) => {
-    let text = "starting demo"
     let attachments = []
-
     let bottomActions = [{ name: 'recycle', text: ':arrow_heading_down: Move to bottom', type: 'button' }]
 
     attachments.push({
