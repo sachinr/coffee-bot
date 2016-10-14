@@ -114,7 +114,8 @@ module.exports = (slapp) => {
 
 
   slapp.action('ristretto_callback', (msg, value) => {
-    let original = JSON.parse(msg.original_message);
+    console.log(msg, value)
+    let original = msg.body.original_message;
     let selected = original.actions[0].value;
 
     original.attachments.forEach(attachment => {
