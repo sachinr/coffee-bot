@@ -16,7 +16,7 @@ module.exports = (slapp) => {
       callback_id: 'start_order_callback',
       actions: [
         { "name": "yes", "value": "yes", "text": "yes", "type": "button"},
-        { "name": "no," "value": "no", "text": "no", "type": "button"}
+        { "name": "no", "value": "no", "text": "no", "type": "button"}
         ]
     })
 
