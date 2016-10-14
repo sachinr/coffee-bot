@@ -3,5 +3,6 @@ description:
 email: sachin.ranchod@gmail.com
 slackscopes:
   - bot
+  - commands
   - channels:history
   - groups:history
