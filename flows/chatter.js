@@ -21,7 +21,7 @@ module.exports = (slapp) => {
             title: "SAP IoT / Slack intros",
             title_link: "https://deep-link-to-calendar-event.com",
             text: "10:00 to 11:00 (10 people)",
-            footer: "Main Conference Room"
+            footer: "Main Conference Room",
             actions: [
               { "name": "yes", "value": "yes", "text": "yes", "type": "button"},
               { "name": "no", "value": "no", "text": "no", "type": "button"}
