@@ -127,7 +127,7 @@ module.exports = (slapp) => {
       });
     });
 
-    msg.respond(msg.body.response_url, orig)
+    msg.respond(msg.body.response_url, original)
   })
 
 
