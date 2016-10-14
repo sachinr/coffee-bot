@@ -149,6 +149,7 @@ module.exports = (slapp) => {
     msg.say({
       username: "Nespresso",
       icon_url: "https://pbs.twimg.com/profile_images/2670601388/5769c52bf673126ad1359454f119c74b.jpeg",
+      text: "",
       attachments: attachments
     }, (err) => {
       if (err && err.message === 'channel_not_found') {
