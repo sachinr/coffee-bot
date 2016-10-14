@@ -49,6 +49,7 @@ module.exports = (slapp) => {
       text: "A blend of South American and East African Arabicas, with a touch of Robusta, roasted separately to create the subtle fruity note of this full-bodied, intense espresso.",
       thumb_url: "https://www.nespresso.com/ecom/medias/sys_master/public/9375746555934/C-0023-small-60x60.png",
       footer: "20 pods in stock",
+      callback_id: "Ristretto",
       actions: bottomActions(5)
     })
 
@@ -58,6 +59,7 @@ module.exports = (slapp) => {
       text: "As in the age of sailing ships, West Indian Malabar Arabica beans are exposed to monsoon winds after harvest to reveal a distinguished aromatic profile, rich with cereal notes. We blend these with Latin American Arabica beans to create a lungo with a truly intense character.",
       thumb_url: "https://www.nespresso.com/ecom/medias/sys_master/public/9381719375902/C-0126-icon-42x42.png",
       footer: "6 pods in stock",
+      callback_id: "Fortissio Lungo",
       actions: bottomActions(5)
     })
 
@@ -67,6 +69,7 @@ module.exports = (slapp) => {
       text: "Envivo Lungo was specially designed for the morning by Nespresso Coffee Experts. It is a long-cup that stimulates the senses through its high intensity and generous character. This dark roasted coffee is a blend of a distinctive Arabica from India with a Robusta from Mexico. In cup, it reveals a potent character and a full body, roasted notes and rich scents reminiscent of aromatic woods and gingerbread.",
       thumb_url: "https://www.nespresso.com/ecom/medias/sys_master/public/10010672070686/C-CAPS-Icon-42x42.png",
       footer: "2 pods in stock",
+      callback_id: "Envivo Lungo",
       actions: bottomActions(2)
     })
 
@@ -76,6 +79,7 @@ module.exports = (slapp) => {
       text: "Vivalto Lungo is a balanced coffee made from a complex blend of separately roasted South American and East African Arabicas, combining roasted and subtle floral notes.",
       thumb_url: "https://www.nespresso.com/ecom/medias/sys_master/public/9375747997726/C-0038-icon-42x42.png",
       footer: "2 pods in stock",
+      callback_id: "Vivalto Lungo",
       actions: bottomActions(2)
     })
 
@@ -108,8 +112,49 @@ module.exports = (slapp) => {
     })
   })
 
+
+  slapp.action('update_order_callback', (msg, value) => {
+  })
+
+
   slapp.action('submit_order_callback', 'submit', (msg, value) => {
-    msg.say("Done and done")
+    let attachments = [{
+            color: "#fff",
+            fallback: "image",
+            pretext: "Your order for 8 cups of Nepresso has been submitted. Your coffee is now brewing and will be delivered to shortly."
+        }, {
+            color: "#fff",
+            author_name: "1 cup of Ristretto",
+            author_link: "https://www.nespresso.com/us/en/order/capsules/original/professional-ristretto",
+            author_icon: "https://www.nespresso.com/ecom/medias/sys_master/public/9375746555934/C-0023-small-60x60.png"
+        }, {
+            color: "#fff",
+            author_name: "4 cups of Fortissio Lungo",
+            author_link: "https://www.nespresso.com/us/en/order/capsules/original/fortissio-lungo",
+            author_icon: "https://www.nespresso.com/ecom/medias/sys_master/public/9381719375902/C-0126-icon-42x42.png"
+        }, {
+            color: "#fff",
+            author_name: "3 cups of Vivalto Lungo",
+            author_link: "https://www.nespresso.com/us/en/order/capsules/original/vivalto-lungo",
+            author_icon: "https://www.nespresso.com/ecom/medias/sys_master/public/9375747997726/C-0038-icon-42x42.png"
+        }, {
+            fallback: "buttons",
+            color: "#fff",
+            actions: [
+               { "name": "cancel", "text": "Cancel", "style": "danger", "type": "button" }
+            ]
+        }
+    ]
+
+    msg.say({
+      username: "Nespresso",
+      icon_url: "https://pbs.twimg.com/profile_images/2670601388/5769c52bf673126ad1359454f119c74b.jpeg",
+      attachments: attachments
+    }, (err) => {
+      if (err && err.message === 'channel_not_found') {
+        msg.respond('Sorry, I can not write to a channel or group I am not a part of!')
+      }
+    })
   })
 
 }
