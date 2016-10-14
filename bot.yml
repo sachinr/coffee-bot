@@ -1,0 +1,7 @@
+name: Coffee Bot
+description:
+email: sachin.ranchod@gmail.com
+slackscopes:
+  - bot
+  - channels:history
+  - groups:history
