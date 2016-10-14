@@ -119,7 +119,7 @@ module.exports = (slapp) => {
 
     original.attachments.forEach(attachment => {
       // nothing to do
-        //if (original.callback_id !== message.callback_id) return;
+      if (original.callback_id !== msg.callback_id) return;
 
       // update selection to green
       attachment.actions.forEach(action => {
