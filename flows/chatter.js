@@ -49,7 +49,7 @@ module.exports = (slapp) => {
       text: "A blend of South American and East African Arabicas, with a touch of Robusta, roasted separately to create the subtle fruity note of this full-bodied, intense espresso.",
       thumb_url: "https://www.nespresso.com/ecom/medias/sys_master/public/9375746555934/C-0023-small-60x60.png",
       footer: "20 pods in stock",
-      callback_id: "ristretto_callback",
+      callback_id: "update_order_callback",
       actions: bottomActions(5)
     })
 
@@ -59,7 +59,7 @@ module.exports = (slapp) => {
       text: "As in the age of sailing ships, West Indian Malabar Arabica beans are exposed to monsoon winds after harvest to reveal a distinguished aromatic profile, rich with cereal notes. We blend these with Latin American Arabica beans to create a lungo with a truly intense character.",
       thumb_url: "https://www.nespresso.com/ecom/medias/sys_master/public/9381719375902/C-0126-icon-42x42.png",
       footer: "6 pods in stock",
-      callback_id: "Fortissio Lungo",
+      callback_id: "update_order_callback",
       actions: bottomActions(5)
     })
 
@@ -69,7 +69,7 @@ module.exports = (slapp) => {
       text: "Envivo Lungo was specially designed for the morning by Nespresso Coffee Experts. It is a long-cup that stimulates the senses through its high intensity and generous character. This dark roasted coffee is a blend of a distinctive Arabica from India with a Robusta from Mexico. In cup, it reveals a potent character and a full body, roasted notes and rich scents reminiscent of aromatic woods and gingerbread.",
       thumb_url: "https://www.nespresso.com/ecom/medias/sys_master/public/10010672070686/C-CAPS-Icon-42x42.png",
       footer: "2 pods in stock",
-      callback_id: "Envivo Lungo",
+      callback_id: "update_order_callback",
       actions: bottomActions(2)
     })
 
@@ -79,7 +79,7 @@ module.exports = (slapp) => {
       text: "Vivalto Lungo is a balanced coffee made from a complex blend of separately roasted South American and East African Arabicas, combining roasted and subtle floral notes.",
       thumb_url: "https://www.nespresso.com/ecom/medias/sys_master/public/9375747997726/C-0038-icon-42x42.png",
       footer: "2 pods in stock",
-      callback_id: "Vivalto Lungo",
+      callback_id: "update_order_callback",
       actions: bottomActions(2)
     })
 
@@ -113,7 +113,7 @@ module.exports = (slapp) => {
   })
 
 
-  slapp.action('ristretto_callback', (msg, value) => {
+  slapp.action('update_order_callback', (msg, value) => {
     let original = msg.body.original_message;
     let selected = value;
 
