@@ -10,7 +10,7 @@ module.exports = (slapp) => {
 
   slapp.command('/start-demo', /.*/, (msg, text) => {
 
-    attachments.push({
+    let attachments = [{
       text: "You've got a meeting coming up. Would you like to order coffee?",
       fallback: 'Start order',
       callback_id: 'start_order_callback',
@@ -18,7 +18,7 @@ module.exports = (slapp) => {
         { "name": "yes", "value": "yes", "text": "yes", "type": "button"},
         { "name": "no", "value": "no", "text": "no", "type": "button"}
         ]
-    })
+    }]
 
     msg.say({
       text: text,
