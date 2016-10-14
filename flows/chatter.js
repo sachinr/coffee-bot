@@ -35,7 +35,7 @@ module.exports = (slapp) => {
     let attachments = []
 
     function bottomActions(n){
-      actions = []
+      let actions = []
       for(i=0; i<n; i++){
         actions.push({ "name": i + 1, "value": i + 1, "text": i + 1, "type": "button"})
       }
