@@ -10,28 +10,24 @@ module.exports = (slapp) => {
 
   slapp.command('/start-demo', /.*/, (msg, text) => {
 
-    let attachments = [{
-      text: "You've got a meeting coming up. Would you like to order coffee?",
-      fallback: 'Start order',
-      callback_id: 'start_order_callback',
-      attachments: [
-        {
-            fallback: "Important meeting: 10:00 - 11:00",
-            color: "#2952A3",
-            title: "SAP IoT / Slack intros",
-            title_link: "https://deep-link-to-calendar-event.com",
-            text: "10:00 to 11:00 (10 people)",
-            footer: "Main Conference Room",
-            actions: [
-              { "name": "yes", "value": "yes", "text": "yes", "type": "button"},
-              { "name": "no", "value": "no", "text": "no", "type": "button"}
-            ]
-        }
-      ]
-    }]
+    let attachments = [
+      {
+        fallback: "Important meeting: 10:00 - 11:00",
+        color: "#2952A3",
+        title: "SAP IoT / Slack intros",
+        title_link: "https://deep-link-to-calendar-event.com",
+        text: "10:00 to 11:00 (10 people)",
+        footer: "Main Conference Room",
+        callback_id: 'start_order_callback',
+        actions: [
+          { "name": "yes", "value": "yes", "text": "yes", "type": "button"},
+          { "name": "no", "value": "no", "text": "no", "type": "button"}
+        ]
+      }
+    ]
 
     msg.say({
-      text: text,
+      text: "You've got a meeting coming up. Would you like to order coffee?",
       attachments: attachments
     }, (err) => {
       if (err && err.message === 'channel_not_found') {
