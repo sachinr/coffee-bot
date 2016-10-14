@@ -9,14 +9,15 @@ module.exports = (slapp) => {
   })
 
   slapp.command('/start-demo', /.*/, (msg, text) => {
+    text = "starting demo"
+    attachments = []
+
     attachments.push({
-      text: '',
+      text: 'Something',
       fallback: 'move to the bottom',
       callback_id: 'in_or_out_callback',
       actions: bottomActions
     })
-
-    text = "starting demo"
 
     msg.say({
       text: text,
