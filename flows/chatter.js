@@ -1,7 +1,5 @@
 'use strict'
 
-const handleHowAreYou = 'chatter:handleHowAreYou'
-
 module.exports = (slapp) => {
 
   slapp.message('^(hi|hello|hey)$', ['direct_mention', 'direct_message'], (msg, text) => {
@@ -235,5 +233,4 @@ module.exports = (slapp) => {
   slapp.action('update_order_status_callback', 'cancel', (msg, value) => {
     msg.respond("Order cancelled")
   })
-
 }
