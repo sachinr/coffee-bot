@@ -79,6 +79,25 @@ module.exports = (slapp) => {
       actions: bottomActions(2)
     })
 
+    attachments.push({
+      color: "#fff",
+      pretext: "You've selected 8 cups of Nespresso to prepare. Would you like to submit your order?",
+      callback_id: 'submit_order_callback',
+      actions: [{
+        name: "submit",
+        value: "submit",
+        text: "Submit Order",
+        type: "button",
+        style: "primary"
+      }, {
+        name: "cancel",
+        value: "cancel",
+        text: "Cancel",
+        type: "button",
+        style: "danger"
+      }]
+    })
+
     msg.say({
       text: "Great! Lets create your order:",
       attachments: attachments
@@ -88,4 +107,9 @@ module.exports = (slapp) => {
       }
     })
   })
+
+  slapp.action('submit_order_callback', 'submit', (msg, value) => {
+    msg.say("Done and done")
+  }
+
 }
