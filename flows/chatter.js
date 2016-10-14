@@ -152,17 +152,17 @@ module.exports = (slapp) => {
             pretext: "Your order for 8 cups of Nepresso has been submitted. Your coffee is now brewing and will be delivered to shortly."
         }, {
             color: "#fff",
-            author_name: "1 cup of Ristretto",
+            author_name: "1 cup of Ristretto [Brewing]",
             author_link: "https://www.nespresso.com/us/en/order/capsules/original/professional-ristretto",
             author_icon: "https://www.nespresso.com/ecom/medias/sys_master/public/9375746555934/C-0023-small-60x60.png"
         }, {
             color: "#fff",
-            author_name: "4 cups of Fortissio Lungo",
+            author_name: "4 cups of Fortissio Lungo [Brewing]",
             author_link: "https://www.nespresso.com/us/en/order/capsules/original/fortissio-lungo",
             author_icon: "https://www.nespresso.com/ecom/medias/sys_master/public/9381719375902/C-0126-icon-42x42.png"
         }, {
             color: "#fff",
-            author_name: "3 cups of Vivalto Lungo",
+            author_name: "3 cups of Vivalto Lungo [Brewing]",
             author_link: "https://www.nespresso.com/us/en/order/capsules/original/vivalto-lungo",
             author_icon: "https://www.nespresso.com/ecom/medias/sys_master/public/9375747997726/C-0038-icon-42x42.png"
         }, {
@@ -170,7 +170,7 @@ module.exports = (slapp) => {
             color: "#fff",
             callback_id: 'update_order_status_callback',
             actions: [
-               { "name": "update", "text": "Update status", "type": "button" },
+               { "name": "update", "text": "Refresh status", "type": "button" },
                { "name": "cancel", "text": "Cancel", "style": "danger", "type": "button" }
             ]
         }
@@ -194,29 +194,29 @@ module.exports = (slapp) => {
     original.attachments = [{
             color: "#fff",
             fallback: "image",
-            pretext: "Your order for 8 cups of Nepresso has been submitted. Your coffee is now brewing and will be delivered to shortly."
-        }, {
-            color: "#ab27b",
-            author_name: "1 cup of Ristretto",
+            image_url: "https://251d2191a60056d6ba74-1671eccf3a0275494885881efb0852a4.ssl.cf1.rackcdn.com/10302882_enliven-your-mornings--nespresso_tdb12a552.gif",
+            pretext: "Your Nespresso order is brewing" },
+        {
+            color: "#edb431",
+            author_name: "1 cup of Ristretto [Brewing]",
             author_link: "https://www.nespresso.com/us/en/order/capsules/original/professional-ristretto",
-            author_icon: "https://www.nespresso.com/ecom/medias/sys_master/public/9375746555934/C-0023-small-60x60.png"
-        }, {
-
-            color: "#ab27b",
-            author_name: "4 cups of Fortissio Lungo",
+            author_icon: "https://www.nespresso.com/ecom/medias/sys_master/public/9375746555934/C-0023-small-60x60.png" },
+        {
+            color: "#2ab27b",
+            author_name: "4 cups of Fortissio Lungo [Ready]",
             author_link: "https://www.nespresso.com/us/en/order/capsules/original/fortissio-lungo",
-            author_icon: "https://www.nespresso.com/ecom/medias/sys_master/public/9381719375902/C-0126-icon-42x42.png"
-        }, {
-            color: "#ab27b",
-            author_name: "3 cups of Vivalto Lungo",
+            author_icon: "https://www.nespresso.com/ecom/medias/sys_master/public/9381719375902/C-0126-icon-42x42.png" },
+        {
+            color: "#2ab27b",
+            author_name: "3 cups of Vivalto Lungo [Ready]",
             author_link: "https://www.nespresso.com/us/en/order/capsules/original/vivalto-lungo",
-            author_icon: "https://www.nespresso.com/ecom/medias/sys_master/public/9375747997726/C-0038-icon-42x42.png"
-        }, {
+            author_icon: "https://www.nespresso.com/ecom/medias/sys_master/public/9375747997726/C-0038-icon-42x42.png" },
+        {
             fallback: "buttons",
             color: "#fff",
             callback_id: 'update_order_status_callback',
             actions: [
-               { "name": "update", "text": "Update status", "type": "button" },
+               { "name": "update", "text": "Refresh status", "type": "button" },
                { "name": "cancel", "text": "Cancel", "style": "danger", "type": "button" }
             ]
         }
