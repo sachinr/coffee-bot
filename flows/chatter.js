@@ -24,7 +24,7 @@ module.exports = (slapp) => {
       }
     ]
 
-    msg.say({
+    msg.respond({
       username: "Nespresso",
       icon_url: "https://pbs.twimg.com/profile_images/2670601388/5769c52bf673126ad1359454f119c74b.jpeg",
       text: "You've got a meeting coming up. Would you like to order coffee?",
