@@ -28,6 +28,7 @@ module.exports = (slapp) => {
       username: "Nespresso",
       icon_url: "https://pbs.twimg.com/profile_images/2670601388/5769c52bf673126ad1359454f119c74b.jpeg",
       text: "You've got a meeting coming up. Would you like to order coffee?",
+      response_type: "ephemeral",
       attachments: attachments
     }, (err) => {
       if (err && err.message === 'channel_not_found') {
