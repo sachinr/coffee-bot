@@ -24,11 +24,10 @@ module.exports = (slapp) => {
       }
     ]
 
-    msg.respond({
+    msg.say({
       username: "Nespresso",
       icon_url: "https://pbs.twimg.com/profile_images/2670601388/5769c52bf673126ad1359454f119c74b.jpeg",
       text: "You've got a meeting coming up. Would you like to order coffee?",
-      response_type: "ephemeral",
       attachments: attachments
     }, (err) => {
       if (err && err.message === 'channel_not_found') {
@@ -109,10 +108,11 @@ module.exports = (slapp) => {
       }]
     })
 
-    msg.say({
+    msg.respond({
       username: "Nespresso",
       icon_url: "https://pbs.twimg.com/profile_images/2670601388/5769c52bf673126ad1359454f119c74b.jpeg",
       text: "Great! Lets create your order:",
+      response_type: "ephemeral",
       attachments: attachments
     }, (err) => {
       if (err && err.message === 'channel_not_found') {
